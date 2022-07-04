@@ -1,0 +1,57 @@
+# A very simple Flask Hello World app for you to get started with...
+
+from flask import Flask
+
+app = Flask(_name_)
+
+@app.route('/')
+def hello_world():
+    return '''
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        font-family:"Maiandra GD";
+    }
+    #btn{
+        border-radius:3px;
+        transition:0.3s;
+        border: 1px solid darkorange;
+    }
+    #btn:hover{
+        background:darkorange;
+        color:white;
+        transition:0.3s;
+        transform:scale(1.2);
+        letter-spacing:"2dp";
+    }
+</style>
+</head>
+<body>
+
+<center><h1>Student Course Registration Form</h1><center>
+
+<form>
+    <p>Enter Your Name :</p>
+    <input type="text" placeholder="name">
+    <p>Enter Your Reg. Number : </p>
+    <input type="name" placeholder="Reg. Number">
+    <p>Enter Your Department : </p>
+    <input type="name" placeholder="department">
+    <p>Select Course to register : </p>
+    <select>
+        <option>--Select--</option>
+        <option>Data Analytics</option>
+        <option>Cloud Computing</option>
+        <option>Machine Learning</option>
+        <option>Blockchain</option>
+    </select>
+    <br><br>
+    <input type="button" id="btn" name="Register" value="Register" onClick="window.location.reload();">
+</form>
+
+</body>
+</html>
+'''
